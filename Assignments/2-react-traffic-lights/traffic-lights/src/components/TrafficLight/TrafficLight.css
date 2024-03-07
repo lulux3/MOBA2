@@ -1,0 +1,11 @@
+.trafficLight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    height: 300px;
+    width: 100px;
+    background-color: #000;
+    border-radius: 10px;
+}
