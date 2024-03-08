@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API - Test</title>
+  </head>
+  <body>
+    <h2>Test API - Call</h2>
+    <div id="apiResponse"></div>
+    <script type="text/javascript">
+      const apiKey = "86f91c98-84b5-46ef-a8db-ad7bd8fdcd0d";
+      const country = "CH";
+      const url = `https://holidayapi.com/v1/holidays?pretty&key=${apiKey}&country=CH&year=2023`;
+      // https://holidayapi.com/docs 
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          document.getElementById("apiResponse").innerText = JSON.stringify(
+            data,
+            null,
+            2
+          );
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ionic Framework CDN</title>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+  </head>
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Some Ionic App</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+        <ion-button>Ein Button</ion-button>
+        <ion-list>
+          <ion-item>
+            <ion-label>Item 1</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Item 2</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Item 3</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-checkbox label-placement="start">Checkbox</ion-checkbox>
+        <ion-input label="Default input"></ion-input>
+        <ion-input
+          label="Input with placeholder"
+          placeholder="Enter company name"
+        ></ion-input>
+      </ion-content>
+    </ion-app>
+  </body>
+</html>
