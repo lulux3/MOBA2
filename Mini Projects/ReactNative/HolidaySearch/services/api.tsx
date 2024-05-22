@@ -29,7 +29,16 @@ export const fetchResults = async (query: string): Promise<Result[]> => {
     const results: Result[] = filteredResults.map((item: any) => ({
       id: item.id,
       title: item.name.find((name: any) => name.language === 'DE').text,
-      description: `Start Date: ${item.startDate}, End Date: ${item.endDate}, Type: ${item.type}`,
+      startDate: item.startDate,
+      endDate: item.endDate,
+      type: item.type,
+      nationwide: item.nationwide,
+      subdivisions: item.subdivisions
+        ? item.subdivisions.map((sub: any) => ({
+            code: sub.code,
+            shortName: sub.shortName,
+          }))
+        : [],
     }));
 
     return results;
